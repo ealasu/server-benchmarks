@@ -21,7 +21,7 @@ def run_test():
     elapsed = time() - start_time
     rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     print('blobs: {}, elapsed seconds: {}, maxrss: {}'.format(
-      len(blobs), len(blobs) * BLOB_SIZE, elapsed, rss))
+      len(blobs), elapsed, rss))
     with open('blob', 'rb') as f:
       blobs.append(f.read())
 
